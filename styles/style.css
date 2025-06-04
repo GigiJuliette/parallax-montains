@@ -1,0 +1,61 @@
+span, p, h1 {
+  font-family: "Climate Crisis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "YEAR" 1979;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.filler {
+  height: 50vh;
+  position: relative;
+}
+
+.veryfar {
+  --parallax-speed:-10% ;
+}
+
+.far {
+  --parallax-speed: -40% ;
+}
+
+.close {
+  --parallax-speed: -70% ;
+}
+
+.veryclose {
+  --parallax-speed: -100% ;
+}
+
+img {
+  width: 100%;
+}
+
+.parallax__wrapper {
+  position: relative;
+  width: 100vw;
+  aspect-ratio: 3/2;
+}
+.parallax__layer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  animation: parallax linear;
+  animation-timeline: scroll();
+}
+
+@keyframes parallax {
+  to {
+    transform: translateY(var(--parallax-speed));
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

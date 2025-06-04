@@ -1,0 +1,46 @@
+@import "./utils.scss";
+
+.filler{
+  height:50vh;
+  position:relative;
+}
+
+.veryfar{
+  --parallax-speed:-10%
+}
+.far{
+  --parallax-speed: -40%
+}
+.close{
+  --parallax-speed: -70%
+}
+.veryclose{
+  --parallax-speed: -100%
+}
+
+img{
+  width:100%;
+}
+
+.parallax{
+  &__wrapper{
+    position:relative;
+    width:100vw;
+    aspect-ratio: 3 / 2;
+  }
+  &__layer{
+    position:absolute;
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    animation: parallax linear;
+    animation-timeline: scroll();
+  }
+}
+
+@keyframes parallax{
+  to{
+    transform:translateY(var(--parallax-speed));
+  }
+}
