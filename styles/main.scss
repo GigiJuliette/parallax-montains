@@ -1,46 +1,61 @@
 @import "./utils.scss";
 
-.filler{
-  height:50vh;
-  position:relative;
+.main {
+  height: 200vh;
 }
 
-.veryfar{
-  --parallax-speed:-10%
+.veryfar {
+  --parallax-speed: -10%
 }
-.far{
+
+.far {
   --parallax-speed: -40%
 }
-.close{
+
+.close {
   --parallax-speed: -70%
 }
-.veryclose{
+
+.veryclose {
   --parallax-speed: -100%
 }
 
-img{
+.title {
   width:100%;
+  height:100%;
+  font-size: 5rem;
+  color: #fee87c;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  transform:translateY(10%);
+  --parallax-speed:-250%;
 }
 
-.parallax{
-  &__wrapper{
-    position:relative;
-    width:100vw;
+img {
+  width: 100%;
+}
+
+.parallax {
+  &__wrapper {
+    position: relative;
+    width: 100vw;
     aspect-ratio: 3 / 2;
   }
-  &__layer{
-    position:absolute;
-    height:100%;
-    width:100%;
-    top:0;
-    left:0;
+
+  &__layer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
     animation: parallax linear;
     animation-timeline: scroll();
   }
 }
 
-@keyframes parallax{
-  to{
-    transform:translateY(var(--parallax-speed));
+@keyframes parallax {
+  to {
+    transform: translateY(var(--parallax-speed));
   }
 }
